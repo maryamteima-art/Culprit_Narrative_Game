@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <!--Responsiveness-->
+    <meta name = "viewport" content= "width = device-width, initial-scale = 1.0">
+        
+    <!--Linking Style Sheet-->
+    <link rel="stylesheet" href = "game_quiz_backup.css">
+
+    <!--Linking JavaScript-->
+    <!--"Defer" ensures that it loads after the body-->
+    <!--Will change the script to backup script to not lose all work (in case something goes wrong)-->
+    <script defer src="game_backup.js"></script>
+
+    <!--Google Fonts - Indie Flower-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Irish+Grover
+    &family=Rock+Salt&family=Special+Elite&display=swap" rel="stylesheet">
+<head>
+<title>Can You Find The Culprit? (Narrative Game)</title>
+</head>
+<body>
+    <!--NAVIGATION SECTION-->
+    <section class = "quiz_section">
+        <div class = "title_container">
+        <h1>Can You Find The Culprit?</h1>
+        <p>By: Maryam Teima</p>
+        </div>
+    </section>
+
+    <!--SCENE SECTION-->
+
+    <section class = "scene_section flex-col">
+
+        <!--Scene's Image-->
+        <img src="scene/night.png" alt = "Introductory Game Scene Playing" id = "image">
+        
+        <!--Creating Transript Dropdown-->
+        <div class = "dropdown">
+        <span><h1>Scene Transcript (Hover)</h1></span>
+        <div class = "dropdown_text" id = "transcript_text">    
+            <p>Click "Ready" to Begin....</p>
+        </div>
+        </div>
+
+    </section>
+
+    <!--BUTTONS, TRANSCRIPT, QUESTION SECTION (LOWER HALF)-->
+<div class = "overall_container">
+
+    <!--Transcript Container-->
+
+    <div class="buttons_section flex-col flex-centre" id="scene_content">
+        
+    <!--Starter Buttons (The questions, transcript and options will be initialized, rendered and updated via JS ("procedural"))-->
+        <div radio_inputs_container>
+           
+            <!--Options Container (Third "button" (Start))-->
+            <button class = "controller_container" id = "start_button">
+                <p class = "option_text">I'm Ready!</p>
+            </button>
+
+            <!--Retry Button-->
+            <div class = "controller_container hide retry_color" id = "retry_button">
+                <p class = "option_text">Try Again!</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

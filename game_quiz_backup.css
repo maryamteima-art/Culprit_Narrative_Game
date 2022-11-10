@@ -1,0 +1,248 @@
+/*Style Sheet For Quiz Game*/
+
+/*remove default margins and padding on styles before and after changes*/
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+    /*Google Fonts - Indie Flower*/
+    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Special Elite', cursive;
+    
+}
+
+
+/*-------------NAVIGATION SECTION-------------*/
+
+.quiz_section{
+    min-height: 60vh;
+    width:100%;
+    /*Change to Animated Gif later*/
+    background-color: black;
+    /*Styles The Background to cover whole section and have the image itself be centered*/
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+/*---TITLE CONTAINER---*/
+
+
+/*Titles Texts*/
+.title_container{
+    width:50%;
+    color:rgb(255, 103, 1);
+    position: absolute; /*Relative to window*/
+    /*Centre the Texts*/
+    top:50%;
+    left:50%;
+
+/*Shift By half (on x-axis and y-axis) to place in center of the Div*/
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+/*Changing Size of Title*/
+.title_container h1{
+    font-size: 3.5rem;
+}
+/*Changing Size and adding margin to Sub-text*/
+.title_container p{
+    padding-top: 1vh;
+    font-size: 2.5rem;
+    margin: 0 40px;
+}
+
+/*---NAVIGATION RESPONSIVENESS FOR TABLET AND MOBILE (1024 and lower)----*/
+/*
+@media(max-width:1024px){
+    .title_container h1{
+        font-size: 48px;
+    }
+    .title_container p{
+        font-size: 32px;
+        padding-top: 20px;
+    }
+}*/
+
+/*---SCENES SECTION---*/
+
+.scene_section{
+    /*---vh was changed from 100 to 50...see what happens----*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    width:100%;
+    margin: auto;
+    /*Change to Animated Gif later*/
+    background-color: rgb(0, 0, 0);
+    /*Styles The Background to cover whole section and have the image itself be centered*/
+    padding-bottom: 50px;
+    color: antiquewhite;
+    position: relative;
+}
+.scene_section img{
+    width: 80%;
+    height: 70%;
+    padding-bottom: 20px;
+}
+
+/*Transcript Title*/
+.scene_section h1{
+    padding-top: 20px;
+    font-size: 32px;
+}
+
+/*Transcript Dropdown*/
+
+.dropdown_text{
+    display: none;
+    position: absolute;
+    background-color: #bb9b9b;
+    color: black;
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 1;
+    font-size: 23px;
+}
+
+/*When Hovering, display text*/
+.dropdown:hover .dropdown_text {
+    display: block;
+}
+
+/*LOWER HALF (QUESTION and BUTTONS) SECTION*/
+
+.overall_container{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    /*Centring*/
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/*SETTING UP FLEX PROPERTIES BEFOREHAND (TO BE USED IN THE SECTIONS-SETUP) INSTEAD OF REWRITING MULTIPLE TIMES*/
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-centre{
+    justify-content: center;
+    align-items: center;
+}
+.justify-centre{
+    justify-content: center;
+}
+
+.centre-text{
+    text-align: center;
+
+}
+
+
+/*Color Setup*/
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+
+.buttons_section{
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+}
+
+.option_container p{
+    color: rgb(0, 0, 0);
+}
+
+/*Styling Controller Button (start and next)*/
+.controller_container{
+    display: flex;
+    margin-bottom: 0.6rem;
+    width: 100%;
+    border-radius: 10px;
+    background-color: orange;
+    font-size: 32px;
+    min-width: 80rem;
+}
+
+/*Hovering effect on buttons*/
+.controller_container:hover{
+    cursor: pointer;
+    box-shadow: 0 6px 25px 0 rgb(255, 60, 0);
+    transform: scale(0.98);
+    transition: transform 90ms;
+}
+
+.option_text{
+    padding: 2rem;
+    width:100%;
+}
+
+/*Styling the Radio Inputs (options)*/
+
+/*Hiding the defualt-symbol-circles*/
+/*.option_container input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}*/
+
+/*STYLING HTML PROPERTIES RENDERED AND INITIALIZED IN JS*/
+
+
+/*Styling the circle-symbol looks*/
+.option_container label{
+    display: flex;
+    margin-bottom: 0.6rem;
+    width: 100%;
+    border-radius: 10px;
+    background-color: orange;
+    font-size: 2rem;
+    min-width: 80rem;
+}
+/*When radio Button is Clicked styling*/
+.option_container input[type="radio"]:checked + label {
+    background-color: #bfb;
+    border-color: #4c4;
+    transition: 0.5s;
+}
+/*When clicking on option and interchanging with keyboard (up + down OR left + right)*/
+.option_container input[type="radio"]:focus + label {
+    border: 2px rgb(187, 255, 187);
+}
+
+.retry_color{
+    background: linear-gradient(40deg, rgb(182, 45, 209) 0%, rgb(235, 0, 0) 100%); 
+}
+
+/*Hide Class - Allows to Hide the buttons at the start to only show the start button when opening the document/game*/
+.hide{
+    display: none;
+}
+
+/*Styling JS Text (question and scene number)*/
+.js_text{
+    padding-top: 40px;
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+/*---LOWER-HALF RESPONSIVENESS FOR TABLET AND MOBILE (1024 and lower)----*/
+
+@media(max-width:1024px){
+    .option_container label{
+        min-width: 28rem;
+    }
+
+    .controller_container{
+        min-width: 28rem;
+    }
+}

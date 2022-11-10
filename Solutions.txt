@@ -1,0 +1,38 @@
+﻿Different Story Paths (Winning):
+
+
+Right Building → Hatem → Apologies for the delay…….. → Right Person → Win
+
+
+Right Building → Hazem → Check beside the building → Right Person → Win
+
+
+Right Building → Hatem → Haha Yea…I.m a Detective….. → That’s not what I meant…apologies → Right Person → Win
+
+
+Left Building → Left Person → Apologies For The Delay → Right Person → Win
+
+
+Left Building → Right Person → Near The Door → Right Person → Win
+
+
+
+
+Different Story Paths (Losing “With Alternate-Endings”):
+
+
+Left Building → Right Person → Behind The Trash Can → Some obstacles in the way… → Lose Ending 2
+
+
+
+
+Left Building → Right Person → Behind The Trash Can → I’m Really Close…. → Lose Ending 1
+
+
+Right Building → Hazem → Call for another day… → I’m really close… → Lose Ending 1
+
+
+Right Building → Hazem → Call for another day → Some Obstacles in the way… → Lose Ending 2
+
+
+Right Building → Hatem → Haha..yea I’m a detective… → Look I’m not here to cause trouble → Lose Ending 3
